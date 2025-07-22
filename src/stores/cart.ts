@@ -1,7 +1,11 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
-export interface Product {}
+export interface Product {
+  name: string,
+  image: string,
+  description: string,
+}
 
 export const useProductStore = defineStore('', () => {
   const products = ref<Product[]>([]);
@@ -19,7 +23,7 @@ export const useProductStore = defineStore('', () => {
   }
 
   async function loadProducts() {
-    const response = await fetch('https://vue-study.skillbox.cc/api/products');
+    const response = await fetch('https://fake-store-api.mock.beeceptor.com/api/products');
     const data = await response.json();
     products.value = data;
   }
