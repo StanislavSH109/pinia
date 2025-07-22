@@ -3,7 +3,7 @@ import { ref } from 'vue';
 
 export interface Product {}
 
-export const userProductStore = defineStore('', () => {
+export const useProductStore = defineStore('', () => {
   const products = ref<Product[]>([]);
   function addProduct(product: Product) {
     products.value.push(product);
@@ -16,6 +16,12 @@ export const userProductStore = defineStore('', () => {
 
   function hasProduct(product: Product) {
     return products.value.includes(product);
+  }
+
+  async function loadProducts() {
+    const response = await fetch('https://vue-study.skillbox.cc/api/products');
+    const data = await response.json();
+    products.value = data;
   }
 
   return { products, addProduct, removeProduct, hasProduct };
