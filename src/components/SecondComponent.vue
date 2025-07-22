@@ -8,10 +8,7 @@
 <script lang="ts" setup>
 import { useCounterStore } from '@/stores/counter';
 
-const store = useCounterStore()
-
+const store = useCounterStore();
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
