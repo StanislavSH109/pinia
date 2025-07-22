@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <h2>Product List</h2>
-    <ProductCard v-for="product in productsStore.products" :product="product"/>
+    <div class="wrapper">
+      <ProductCard v-for="product in productsStore.products" :product="product"/>
+    </div>
   </div>
 </template>
 
@@ -24,5 +26,13 @@ onMounted(() => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    :last-child {
+      grid-column: span 2;
+    }
+  }
 }
 </style>

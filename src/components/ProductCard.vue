@@ -1,8 +1,8 @@
 <template>
-    <div class="product">
-      <h3>{{ product.name }}</h3>
-      <p>{{ product.description }}</p>
-    </div>
+  <div class="product">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -15,7 +15,8 @@ const props = defineProps<{product: Product}>()
 .product {
    padding: 16px;
   display: flex;
-  gap: 16px;
   border: 1px solid white;
+  flex-direction: column;
+  text-align: center;
 }
 </style>
