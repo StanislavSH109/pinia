@@ -24,5 +24,5 @@ export const useProductStore = defineStore('', () => {
     products.value = data;
   }
 
-  return { products, addProduct, removeProduct, hasProduct };
+  return { products, addProduct, removeProduct, hasProduct, loadProducts };
 });
