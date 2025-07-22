@@ -2,10 +2,10 @@ import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
 export interface Product {
-  id: number,
-  name: string,
-  image: string,
-  description: string,
+  product_id: number;
+  name: string;
+  image: string;
+  description: string;
 }
 
 export const useProductStore = defineStore('', () => {

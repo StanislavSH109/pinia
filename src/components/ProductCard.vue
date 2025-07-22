@@ -6,14 +6,14 @@
 </template>
 
 <script lang="ts" setup>
-import type { Product} from '@/stores/cart';
+import type { Product } from '@/stores/cart';
 
-const props = defineProps<{product: Product}>()
+const props = defineProps<{ product: Product }>();
 </script>
 
 <style lang="scss" scoped>
 .product {
-   padding: 16px;
+  padding: 16px;
   display: flex;
   border: 1px solid white;
   flex-direction: column;
